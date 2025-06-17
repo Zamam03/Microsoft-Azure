@@ -6,7 +6,7 @@ A secure and well-architected network forms the backbone of any resilient cloud 
 
 ## 3. Networking & Security in Azure
 
-### 📌 3.1 Virtual Networks & Subnets
+### 3.1 Virtual Networks & Subnets
 
 Azure Virtual Networks (VNets) provide isolated, logically segmented environments in which we can run Azure resources securely. 
 
@@ -22,7 +22,7 @@ Azure Virtual Networks (VNets) provide isolated, logically segmented environment
 
 ---
 
-### 📌 3.2 Network Security Groups (NSGs)
+### 3.2 Network Security Groups (NSGs)
 
 NSGs control inbound and outbound traffic at both subnet and NIC level.
 
@@ -38,15 +38,15 @@ NSGs control inbound and outbound traffic at both subnet and NIC level.
 
 ---
 
-### 📌 3.3 Secure Access with Azure Bastion
+### 3.3 Secure Access with Azure Bastion
 
 Azure Bastion allows secure RDP/SSH access to virtual machines **without exposing public IP addresses**.
 
 **Scenario: Deploy VM, access it via Bastion, and install NGINX**
 
-#### ✅ Step-by-Step:
+#### Step-by-Step:
 
-**🔹 1. Create VM in a subnet with NSG attached**
+** 1. Create VM in a subnet with NSG attached**
 
 ```bash
 az vm create \
@@ -62,7 +62,7 @@ az vm create \
   --enable-bastion true
 ```
 
-**🔹 2. Deploy Azure Bastion to the VNet**
+** 2. Deploy Azure Bastion to the VNet**
 
 ```bash
 az network bastion create \
@@ -74,11 +74,11 @@ az network bastion create \
   --scale-units 2
 ```
 
-📌 *Now connect to the VM using the Azure Portal > Bastion tab (no public IP required).*
+ *Now connect to the VM using the Azure Portal > Bastion tab (no public IP required).*
 
 ---
 
-### 📌 3.4 Installing and Securing NGINX
+### 3.4 Installing and Securing NGINX
 
 Once inside the VM via Bastion:
 
@@ -98,7 +98,7 @@ curl http://localhost
 
 ---
 
-### 📌 3.5 Locking Down Access with NSG + Firewall Rule
+### 3.5 Locking Down Access with NSG + Firewall Rule
 
 **Objective**: Only allow your IP to access the NGINX web server over port 80.
 
@@ -117,11 +117,11 @@ az network nsg rule create \
   --destination-address-prefixes "*" 
 ```
 
-📌 *Other inbound access will be implicitly denied unless explicitly allowed.*
+ *Other inbound access will be implicitly denied unless explicitly allowed.*
 
 ---
 
-### 🔁 Validation & Access
+### Validation & Access
 
 From your **local machine**, you can now access the deployed web app:
 
@@ -129,9 +129,9 @@ From your **local machine**, you can now access the deployed web app:
 http://<VM_PRIVATE_IP>
 ```
 
-If accessed from your whitelisted IP: ✅ "hello world"
+If accessed from your whitelisted IP: "hello world"
 
-If not: ❌ Access Denied (thanks to NSG)
+If not: Access Denied (thanks to NSG)
 
 ---
 
