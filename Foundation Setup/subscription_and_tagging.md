@@ -1,6 +1,6 @@
 # Azure Cloud Journey: Setting Up the Foundation
 
-This project documents my hands-on experience with Azure fundamentals, covering core cloud management concepts.
+This performing simple operations through the Azure portal. These operations can also be managed through ARM templates (IaC).
 
 ---
 
