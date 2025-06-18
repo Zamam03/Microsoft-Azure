@@ -6,7 +6,7 @@ This performing simple operations through the Azure portal. These operations can
 
 ## 1. Setting Up the Foundation
 
-### 📌 1.1 Creating and Managing Azure Subscriptions
+### 🔷 1.1 Creating and Managing Azure Subscriptions
 Azure subscriptions form the billing/security boundary for resources.
 
 **Screenshots:**
@@ -29,7 +29,7 @@ Azure subscriptions form the billing/security boundary for resources.
 
 ---
 
-### 📌 1.2 Navigating Azure Tools
+### 🔷 1.2 Navigating Azure Tools
 
 **Screenshots:**
 
@@ -51,7 +51,7 @@ Azure subscriptions form the billing/security boundary for resources.
 
 ---
 
-### 📌 1.3 Resource Organization
+### 🔷 1.3 Resource Organization
 
 **Screenshots:**
 
