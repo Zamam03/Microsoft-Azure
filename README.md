@@ -57,7 +57,7 @@ Exploring Azure’s AI capabilities:
 - **Cognitive Services** for vision, speech, and NLP.  
 
 ## Why This Repository?  
-This is more than just documentation—it’s a **living lab** where I experiment, fail, learn, and share. Each folder contains real-world examples, scripts, and best practices.  
+This is more than just documentation, it’s a **living lab** where I experiment, fail, learn, and share. Each folder contains real-world examples, scripts, and best practices.  
 
 ## Let’s Connect!  
 Have suggestions or questions? Open an issue or reach out!  
