@@ -5,13 +5,13 @@ Welcome to **Azure Journey**, a comprehensive guide documenting my exploration, 
 ## The Path We Travel  
 
 ### 1. **Setting Up the Foundation**  
-Every journey begins with the first step,**understanding Azure’s core services**. We start by:  
+Every journey begins with the first step, **understanding Azure’s core services**. We start by:  
 - **Creating and managing Azure subscriptions** (Pay-As-You-Go, Enterprise Agreements).  
 - **Navigating the Azure Portal & Azure CLI** for efficient cloud management.  
 - **Resource Groups & Tagging Strategies** to keep deployments organized.   
 
 ### 2. **Infrastructure as Code (IaC) with ARM & Terraform**  
-Manual deployments are error-prone,**automation is key**. Here, we:  
+Manual deployments are error-prone, **automation is key**. Here, we:  
 - Define infrastructure using **ARM Templates** (Azure Resource Manager).  
 - Leverage **Terraform** for multi-cloud and modular deployments.  
 - Implement **CI/CD pipelines for IaC** (Azure DevOps, GitHub Actions).    
