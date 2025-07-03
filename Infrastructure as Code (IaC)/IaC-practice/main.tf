@@ -68,16 +68,17 @@ resource "azurerm_linux_virtual_machine" "docker_testing" {
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
+    disk_size_gb         = 16  # Minimum recommended for Ubuntu
   }
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "UbuntuServer"
+    offer     = "0001-com-ubuntu-server-jammy"
     sku       = "22_04-lts"
     version   = "latest"
   }
 
-
-  secure_boot_enabled = true
-  vtpm_enabled        = true
+  # These can be enabled if needed, but disable for testing
+  secure_boot_enabled = false
+  vtpm_enabled        = false
 }
