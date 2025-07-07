@@ -49,12 +49,7 @@ Security is non-negotiable. We dive into:
 ### 8. **Serverless & Event-Driven Architectures**  
 Going serverless for scalability and cost efficiency:  
 - **Azure Functions & Logic Apps** for automation.  
-- **Event Grid & Service Bus** for event-driven workflows.   
-
-### 9. **AI & Machine Learning in Azure**  
-Exploring Azure’s AI capabilities:  
-- **Azure Machine Learning Studio** for model training.  
-- **Cognitive Services** for vision, speech, and NLP.  
+- **Event Grid & Service Bus** for event-driven workflows.    
 
 ## Why This Repository?  
 This is more than just documentation, it’s a **living lab** where I experiment, fail, learn, and share. Each folder contains real-world examples, scripts, and best practices.  
