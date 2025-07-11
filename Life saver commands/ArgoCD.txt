@@ -1,0 +1,38 @@
+Step 0: Install argocd
+
+~kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+Step 1: Checking pods
+ 
+~ kubectl get pods -n argocd
+
+Step 2: Configure argocd
+
+~ kubectl get secrets -n argocd
+output: bunch of secrets
+~ kubectl edit secret argocd-initial-admin-secret -n argocd
+
+Step 3: echo
+
+~ echo ajBNUVFjUkt2M3QyekJ1Tg== | base64 --decode
+output: j0MQQcRKv3t2zBuN
+
+Step 4: Accessing argocd from browser
+
+~ kubectl get svc -n argocd
+Option 1: Temporarily use nano for just one command
+~ KUBE_EDITOR=nano kubectl edit svc argocd-server -n argocd
+Option 2: Permanently change your default editor to nano
+~ echo 'export KUBE_EDITOR=nano' >> ~/.bashrc
+Reload your shell:
+~ source ~/.bashrc
+
+Edit
+~ kubectl edit svc argocd-server -n argocd
+
+Step 5: Get external IP
+
+~ kubectl get node -o wide
+
+6y3Q1er9ZCZTyM0KQRWwfqHN6jcgKMzKvXnAlY0p1ylYrKUmv1OZJQQJ99BEACAAAAAa5hq4AAASAZDO4KZT

@@ -1,0 +1,17 @@
+Step 1: Login
+
+~ az login
+
+~ az aks get-credentials --name kubecicd --overwrite-existing-group Examcicd
+
+Step 2: Error(check)
+
+If kubectl not installed, Install:
+~ az aks install-cli
+
+Restart bash, and run:
+~ kubectl version --client
+
+Testing:
+~ kubectl get pods
+

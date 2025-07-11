@@ -1,0 +1,192 @@
+Mostly Used Commands in DevOps:
+
+1). Ls: This command is used to list the contents of a directory.
+
+if you run ls -l, it will show the permissions, owner, size, and last modified date for each file in the directory.
+
+[IMAGE]
+
+2). Sudo: This command executes only that command with superuser privileges.
+
+[IMAGE]
+
+3). Pwd: This command will print your directory location, where you currently working.
+
+[IMAGE]
+
+4). Cat: This is used to concatenate and display files on the terminal. It can also be used to modify existing ones.
+
+ cat -b: This adds line numbers to non-blank lines
+
+ cat -n: This adds line numbers to all lines
+
+ cat -s: This squeezes blank lines into one line
+
+ cat –E: This shows $ at the end of the line
+
+[IMAGE]
+
+5). Vim: This is a text editor used in Linux. It stands for “Vi Improved”.
+
+[IMAGE]
+
+Mostly used modes in VIM:
+
+~> Normal mode: This is the default mode in which vim starts. In normal mode, you can use various commands to navigate and edit the text.
+~> Insert mode: In insert mode, you can type text into the file. To enter insert mode, press the "i" key. To exit insert mode and return to normal mode, press the "Esc" key.
+~> Command mode: In command mode, you can enter commands to perform various actions, such as saving the file or quitting vim. To enter command mode, press the ":" key.
+
+6). Grep: This command searches for a particular string/ word in a text file. This is similar to “Ctrl+F” but executed via a CLI.
+
+[IMAGE]
+
+This would print all of the lines in “chxtan.txt” that contain the word “This".
+
+7). Sort: This command is used to sort the results of search either alphabetically or numerically. It also sorts files and directories.
+
+[IMAGE]
+
+sort -r: the flag returns the results in reverse order.
+
+sort -f: the flag does case-insensitive sorting.
+
+sort -n: the flag returns the results as per numerical order.
+
+8). Tail: This command prints the last N number of data of the given input. By default, it prints 10 lines.
+
+We can specify the number of lines, that we want to display.
+
+[IMAGE]
+
+9). Chmod: This command is used to change the access permissions of files and directories.
+
+For example: Following “chmod” command will give the user permission to read, write and execute a file.
+
+[IMAGE]
+
+10). Chown: This command is used to change the file Owner or group.
+
+Here, below the ownership of “Chetan.txt” file got changed to root.
+
+[IMAGE]
+
+11). Ping – This command will ping a host and check if it is responding.
+
+[IMAGE]
+
+12). Lsof: It is used to display a list of all the open files on a Linux system.
+
+[IMAGE]
+
+13). Ifconfig: This is used to configure the kernel-resident network interfaces.
+
+[IMAGE]
+
+14).  ID: This is used to find out user and group names and numeric ID’s (UID or group ID) of the current user or any other user in the server.
+
+Syntax: id <option> <user_name>
+
+[IMAGE]
+
+15). Cut: This command is used to extract specific fields or columns from a file or standard input.
+
+It is often combined with other commands, such as sort, uniq, and grep, to perform more complex text-processing tasks.
+
+[IMAGE]
+
+16). Sed: This is used to perform basic text transformations on an input file. It stands for "stream editor" and is a powerful tool for editing text files or streams in a Linux environment.
+
+[IMAGE]
+
+17). Diff: This command is used to find the difference between two files.
+
+[IMAGE]
+
+18). History: This command is used to view the previously executed command.
+
+[IMAGE]
+
+“History 10” – Will give you the last 10 executed commands.
+
+[IMAGE]
+
+19). Find: This is used to find files and directories and perform subsequent operations on them. 
+
+In the below command, It will search in the present working directory and its subdirectories, and print the name of the file that have “.txt” file extension.
+
+[IMAGE]
+
+20). Free: This command displays the total amount of free space available along with the amount of memory used and swap memory in the system, and also the buffers used by the kernel.
+
+[IMAGE]
+
+21). ssh user@host – connect to the host as a user.
+
+22). Ssh-keygen: This command is used to generate a public/private authentication key pair.
+
+This process of authentication allows the user to connect remote server without providing a password.
+
+(This authentication method we will use to authenticate the server with Jenkins while deploying CI/CD pipelines).
+
+[IMAGE]
+
+23). Nslookup: This stands for “Name server Lookup”. This is a tool for checking DNS hostname to Ip or Ip to Hostname. This is very helpful while troubleshooting.
+
+[IMAGE]
+
+24). Curl: Curl is a tool used for transferring data to or from a server, using various protocols, such as HTTP, HTTPS, FTP, and more. Basic example:
+
+Syntax: curl <url>
+
+[IMAGE]
+
+-o: It will save downloaded file on the local machine with the name provided in parameters.
+
+[IMAGE]
+
+25).  Tr: Tr stands for translation. This command is for translating or deleting characters. 
+
+[IMAGE]
+
+26). Apt-get: This command is used to install, update, and remove packages, as well as to manage the package repository sources.
+
+Here are some common apt-get commands:
+
+~> apt-get update: This updates the package index files from the package repositories listed in the /etc/apt/sources.list file. This is usually the first command you should run after adding a new repository or package to your system.
+~> apt-get upgrade: This installs newer versions of packages that are already installed on the system. It will also remove any packages that are no longer required.
+~> apt-get install: This installs one or more packages. For example, to install the nano text editor, you would run apt-get install nano.
+~> apt-get remove: This removes one or more packages, but it does not remove the configuration files for the package.
+apt-get purge: This removes one or more packages and their configuration files.
+~> apt-get autoremove: This removes packages that were installed as dependencies but are no longer needed.
+
+27). Df, du: 
+
+Df (disk free) command will have an account of available disk space, used by file system. 
+
+Du (disk usage) command reports the size of directory tree including all the content.
+
+[IMAGE]
+
+[IMAGE]
+
+28). Htop: This command is used to monitor the system’s resources and processes that are running in real time.
+
+[IMAGE]
+
+29). Ps: We use ps command to check the unique id behind every process.
+
+a = show processes for all users
+u = display the process’s user/owner
+x = also show processes not attached to a terminal
+
+[IMAGE]
+
+30). Kill: This command is used to terminate processes manually. This command basically, will send a signal that terminates it.
+
+[IMAGE]
+
+31). TNC: This is “Test Network Connection” command. Mostly used command while troubleshooting. It displays diagnostic information for a connection.
+
+ 
+
+Command: tnc <server_name> -port <port>
