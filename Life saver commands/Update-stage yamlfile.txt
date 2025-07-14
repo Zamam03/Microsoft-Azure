@@ -1,0 +1,7 @@
+- stage: Update
+  displayName: Update stage
+  jobs:
+  - job: Update
+    displayName: Update job
+    steps:
+     - task: ShellScript@2

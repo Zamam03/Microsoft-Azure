@@ -1,0 +1,72 @@
+1). Running simple shell script:
+
+>> name of file: hello.sh
+>> CODE:
+
+#!/bin/bash
+echo "Hello, World!" 
+echo "Knowledge is power."
+
+>>If output: "-bash: ./hello.sh: Permission denied"
+~> then run: chmod +x hello.sh
+~> ./hello.sh
+
+ #######################################################################################################################################################################################
+
+>> What is bash shebang?
+~> The #! syntax is used in scripts to indicate an interpreter for execution under UNIX / Linux operating systems.
+
+>> Syntax
+The syntax is:
+
+#!/path/to/interpreter [arguments]
+#!/path/to/interpreter -arg1 -arg2
+
+>> Examples
+
+#!/bin/bash or #!/usr/bin/env bash
+#!/usr/bin/perl
+#!/usr/bin/python
+#!/usr/bin/python3
+
+######################################################################################################################################################################################
+
+2). Permissions (Linux scripting)
+
+>>Examples
+Allowing everyone to execute the script, enter:
+
+~> chmod +x script.sh
+OR
+
+~> chmod 0755 script.sh
+
+Only allow owner to execute the script, enter:
+
+~> chmod 0700 script.sh
+
+OR
+
+~> chmod u+x script.sh
+
+To view the permissions, use:
+
+~> ls -l script.sh
+
+Set the permissions for the user and the group to read and execute only (no write permission), enter:
+
+~> chmod ug=rx script.sh
+
+Remove read and execute permission for the group and user, enter:
+
+~> chmod ug= script.sh
+
+>> More about chmod
+
+Type the following command to read chmod man page:
+
+~> man chmod
+
+#Please note that script must have both executable and read permission.
+
+

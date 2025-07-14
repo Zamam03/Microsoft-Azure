@@ -1,0 +1,15 @@
+# Step 1: Create a clean folder
+mkdir ~/myagent
+cd ~/myagent
+
+# Step 2: Download latest agent (replace URL with latest from Microsoft)
+curl -O https://vstsagentpackage.azureedge.net/agent/3.236.1/vsts-agent-linux-x64-3.236.1.tar.gz
+
+# Step 3: Extract
+tar zxvf vsts-agent-linux-x64-3.236.1.tar.gz
+
+# Step 4: Configure
+./config.sh
+
+# Step 5: Run
+./run.sh

@@ -1,0 +1,31 @@
+1. Switch to powershell in VS Code then install Terraform:
+~> powershell
+winget install HashiCorp.Terraform
+
+2. Check for version to see if properly installed:
+~> terraform --version
+
+3. Initiate terraform to correct directory:
+example ~> cd "C:\Users\Hmpre\voting-app\Azure-Journey-1\Infrastructure as Code (IaC)\IaC-practice"
+
+4. Initialize (once):
+~> terraform init
+
+5. Plan & Deploy:
+~> terraform plan
+~> terraform apply  # Type 'yes'
+
+6. Destroy later:
+~> terraform destroy  # Type 'yes'
+
+7. If encountering errors clean and re-initialize:
+~> rm -rf .terraform* terraform.tfstate*
+
+8. If you want to lock in the exact plan for later use (e.g., in automation or CI/CD), use the -out option:
+~> terraform plan -out=tfplan
+
+9. Then apply exactly that plan later:
+~> terraform apply tfplan
+
+10. Checking available images per region:
+~> az vm image list --publisher Canonical --offer UbuntuServer --all --location "East US" --output table

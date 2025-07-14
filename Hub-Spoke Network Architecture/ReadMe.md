@@ -10,7 +10,7 @@ A secure and well-architected network forms the backbone of any resilient cloud 
 
 Azure Virtual Networks (VNets) provide isolated, logically segmented environments in which we can run Azure resources securely. 
 
-**Screenshots:**
+
 
 1. **VNet Creation**
 ![VNet](https://github.com/user-attachments/assets/vnet-example)  
@@ -26,7 +26,7 @@ Azure Virtual Networks (VNets) provide isolated, logically segmented environment
 
 NSGs control inbound and outbound traffic at both subnet and NIC level.
 
-**Screenshot:**
+
 
 2. **NSG Configuration**
 ![NSG](https://github.com/user-attachments/assets/nsg-example)  

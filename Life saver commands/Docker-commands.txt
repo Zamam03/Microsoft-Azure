@@ -1,0 +1,58 @@
+Step 1: Purge broken Docker install
+
+sudo apt-get purge -y docker.io
+sudo rm -rf /var/lib/docker /var/lib/containerd /etc/docker /run/docker* ~/.docker
+sudo apt-get autoremove -y
+sudo apt-get autoclean
+
+Step 2: Check for leftover or broken unit files
+
+sudo rm -f /etc/systemd/system/docker.service
+sudo rm -f /etc/systemd/system/docker.socket
+sudo systemctl daemon-reload
+
+Check
+
+ls /etc/systemd/system | grep docker
+
+Step 3: Reinstall Docker (clean method via Docker's official source)
+
+# Prerequisites
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg lsb-release
+
+# Add Docker's official GPG key
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the Docker repo
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update and install
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Step 4: Enable and start Docker
+
+sudo systemctl enable docker
+sudo systemctl start docker
+
+Test it:
+
+sudo docker run hello-world
+
+
+Option 1: Add your user to the docker group
+This is the recommended fix if you're using a self-hosted agent under a user like azureuser:
+
+sudo usermod -aG docker azureuser
+
+Rebooting:
+
+sudo reboot
